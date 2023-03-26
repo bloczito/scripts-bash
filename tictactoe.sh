@@ -70,7 +70,7 @@ function get_move() {
         read -p "Player $player > " move
     done
 
-    while [[ "${board[$move-1]}" = "X" || "${board[$move-1]}" = "O" ]]; do
+    while [[ "${board[$move-1]}" = "$player1" || "${board[$move-1]}" = "$player2" ]]; do
         echo "Invalid move. The given number is already taken:"
         read -p "Player $player > " move
     done
